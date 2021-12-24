@@ -1,22 +1,23 @@
 /**
  * CSS RESET 
- * From https://www.joshwcomeau.com/css/custom-css-reset/
+ * Originally from https://www.joshwcomeau.com/css/custom-css-reset/
+ * But now modified
  */
 
 /*
-    Use a more-intuitive box-sizing model
+    More intuitive box-sizing model
 */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
     Remove default margin
 */
 * {
-    margin: 0;
+  margin: 0;
 }
 
 /*
@@ -24,17 +25,16 @@
 */
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 /*
-    Typographic tweaks:
-    Add accessible line-height
+    Accessible line-height
     Improve text rendering
 */
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*
@@ -45,8 +45,8 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /*
@@ -56,7 +56,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /*
@@ -69,7 +69,8 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
+  font-weight: inherit;
 }
 
 /*
@@ -77,7 +78,7 @@ h6 {
 */
 #root,
 #__next {
-    isolation: isolate;
+  isolation: isolate;
 }
 
 /**
@@ -85,136 +86,135 @@ h6 {
  */
 
 .page-container {
-    --default-padding: .5em;
-    --default-border: solid black 1px;
+  --default-padding: 0.5em;
+  --default-border: solid black 1px;
 
-    min-height: 100%;
-    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    padding: .7em;
-    background-color: #94949c;
+  min-height: 100%;
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.7em;
+  background-color: #94949c;
 }
 
 .header {
-    padding: var(--default-padding);
-    background-color: f7de5a;
-    border: var(--default-border);
+  padding: var(--default-padding);
+  background-color: f7de5a;
+  border: var(--default-border);
 }
 
 .page-title {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .page-contents {
-    flex: 1;
-    display: flex;
-    border-left: var(--default-border);
-    border-right: var(--default-border);
-    border-bottom: var(--default-border);
+  flex: 1;
+  display: flex;
+  border-left: var(--default-border);
+  border-right: var(--default-border);
+  border-bottom: var(--default-border);
 }
 
 .sidebar {
-    flex: 1;
-    min-width: 8em;
-    padding: var(--default-padding);
-    background-color: #838470;
-    border-right: var(--default-border);
+  flex: 1;
+  min-width: 8em;
+  padding: var(--default-padding);
+  background-color: #838470;
+  border-right: var(--default-border);
 }
 
 @media (max-width: 767px) {
-    .hidden-sm {
-        display: none !important;
-    }
+  .hidden-sm {
+    display: none !important;
+  }
 }
 
 @media (max-width: 576px) {
-    .hidden-xs {
-        display: none !important;
-    }
+  .hidden-xs {
+    display: none !important;
+  }
 }
 
 @media (min-width: 576px) {
-    .visible-xs {
-        display: none !important;
-    }
+  .visible-xs {
+    display: none !important;
+  }
 }
 
 .main-content {
-    flex: 3;
-    padding: var(--default-padding);
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    
+  flex: 3;
+  padding: var(--default-padding);
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 @media (max-width: 456px) {
-    .main-content { 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .footer {
-    flex: 0 0 1.7em;
-    padding-top: var(--default-padding);
+  flex: 0 0 1.7em;
+  padding-top: var(--default-padding);
 }
 
 .navbar {
-    display: flex;
-    border-left: var(--default-border);
-    border-right: var(--default-border);
-    border-bottom: var(--default-border);
+  display: flex;
+  border-left: var(--default-border);
+  border-right: var(--default-border);
+  border-bottom: var(--default-border);
 }
 
 .navbar .btn {
-    flex: 1;
-    background-color: #cec68c;
-    color: #333;
-    border-color: #ccc;
-    text-align: center;
-    border: 1px solid transparent;
-    text-decoration: none;
-    padding-top: .2em;
-    padding-bottom: .2em;
+  flex: 1;
+  background-color: #cec68c;
+  color: #333;
+  border-color: #ccc;
+  text-align: center;
+  border: 1px solid transparent;
+  text-decoration: none;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
 
 .navbar .btn svg {
-    display: inline;
-    position: relative;
-    bottom: 0.125em;
-    vertical-align: middle;
+  display: inline;
+  position: relative;
+  bottom: 0.125em;
+  vertical-align: middle;
 }
 
 .navbar .btn[aria-disabled="true"] {
-    color: #ccc;
+  color: #ccc;
 }
 
 .navbar .btn:nth-child(2) {
-    border-left: 1px solid rgb(132, 132, 132);
-    border-right: 1px solid rgb(132, 132, 132);
+  border-left: 1px solid rgb(132, 132, 132);
+  border-right: 1px solid rgb(132, 132, 132);
 }
 
 .btn[aria-disabled="true"] {
-    cursor: not-allowed;
-    filter: alpha(opacity=65);
-    opacity: .65;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  opacity: 0.65;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .thumbnail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
 }
 
 .thumbnail a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
