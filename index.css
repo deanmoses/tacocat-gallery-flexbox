@@ -86,21 +86,19 @@
 
 .navbar .btn {
   flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.2em;
+
   background-color: #cec68c;
   color: #333;
   border-color: #ccc;
-  text-align: center;
   border: 1px solid transparent;
   text-decoration: none;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-}
-
-.navbar .btn svg {
-  display: inline;
-  position: relative;
-  bottom: 0.125em;
-  vertical-align: middle;
 }
 
 .navbar .btn[aria-disabled="true"] {
