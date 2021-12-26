@@ -16,7 +16,7 @@ body {
 
 .header {
   padding: var(--default-padding);
-  background-color: f7de5a;
+  background-color: #f7de5a;
   border: var(--default-border);
 }
 
@@ -115,9 +115,7 @@ body {
 
 .btn[aria-disabled="true"] {
   cursor: not-allowed;
-  filter: alpha(opacity=65);
   opacity: 0.65;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
