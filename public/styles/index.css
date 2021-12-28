@@ -44,7 +44,9 @@ body {
 
 .page-contents {
   flex: 1;
+
   display: flex;
+
   border-left: var(--default-border);
   border-right: var(--default-border);
   border-bottom: var(--default-border);
@@ -62,8 +64,7 @@ body {
   flex: 3;
 
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  flex-direction: column;
   gap: calc(var(--default-padding) * 2);
 
   padding: calc(var(--default-padding) * 2);
@@ -81,7 +82,6 @@ body {
 .thumbnails {
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
   gap: calc(var(--default-padding) * 2);
 }
 
