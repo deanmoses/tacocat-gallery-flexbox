@@ -71,18 +71,16 @@ body {
   background-color: white;
 }
 
-@media (max-width: 456px) {
-  .main-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 .thumbnails {
   display: flex;
   flex-wrap: wrap;
   gap: calc(var(--default-padding) * 2);
+}
+
+@media (max-width: 456px) {
+  .thumbnails {
+    justify-content: center;
+  }
 }
 
 .footer {
