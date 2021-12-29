@@ -16,14 +16,6 @@
   }
 }
 
-body {
-  --default-padding: 0.5em;
-  --default-border: solid black 1px;
-
-  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-  font-size: 16px;
-}
-
 .app-container[data-year="2021"] {
   --body-color: #94949c;
   --header-color: #f7de5a;
@@ -32,6 +24,12 @@ body {
 }
 
 .app-container {
+  --default-padding: 0.5em;
+  --default-border: solid black 1px;
+
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+
   min-height: 100%;
   background-color: var(--body-color);
   padding: 0.7em;
@@ -86,6 +84,27 @@ body {
   .thumbnails {
     justify-content: center;
   }
+}
+
+.months {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--default-padding) * 2);
+}
+
+section.month {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--default-padding) * 2);
+}
+
+section.month > h3 {
+  background-color: var(--header-color);
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 1.1;
+  padding: 0.3em 0.4em;
+  width: 100%;
 }
 
 footer {
