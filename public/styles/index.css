@@ -24,24 +24,27 @@ body {
   font-size: 16px;
 }
 
-.page-container[data-year="2021"] {
+.app-container[data-year="2021"] {
   --body-color: #94949c;
   --header-color: #f7de5a;
   --sidebar-color: #838470;
   --nav-color: #cec68c;
 }
 
-.page-container {
-  height: 100%;
+.app-container {
+  min-height: 100%;
   background-color: var(--body-color);
   padding: 0.7em;
+}
+
+.page-container {
+  border: var(--default-border);
 }
 
 .header {
   padding: var(--default-padding);
   padding-left: calc(var(--default-padding) * 2);
   background-color: var(--header-color);
-  border: var(--default-border);
 }
 
 .page-title {
@@ -52,10 +55,6 @@ body {
   flex: 1;
 
   display: flex;
-
-  border-left: var(--default-border);
-  border-right: var(--default-border);
-  border-bottom: var(--default-border);
 }
 
 .sidebar {
@@ -89,16 +88,15 @@ body {
   }
 }
 
-.footer {
+footer {
   flex: 0 0 1.7em;
   padding-top: var(--default-padding);
 }
 
 .navbar {
   display: flex;
-  border-left: var(--default-border);
-  border-right: var(--default-border);
-  border-bottom: var(--default-border);
+  /* white so that disabled buttons with opacity show a lighter color */
+  background-color: white;
 }
 
 .navbar .btn {
@@ -111,26 +109,16 @@ body {
 
   background-color: var(--nav-color);
   color: #333;
-  border-color: #ccc;
-  border: 1px solid transparent;
+  border: 1px solid #ccc;
   text-decoration: none;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding: 6px 12px;
 }
 
-.navbar .btn[aria-disabled="true"] {
-  color: #ccc;
-}
-
-.navbar .btn:nth-child(2) {
-  border-left: 1px solid rgb(132, 132, 132);
-  border-right: 1px solid rgb(132, 132, 132);
-}
-
-.btn[aria-disabled="true"] {
+.btn[disabled] {
   cursor: not-allowed;
   opacity: 0.65;
   box-shadow: none;
+  color: #ccc;
 }
 
 .thumbnail {
