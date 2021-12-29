@@ -22,19 +22,27 @@ body {
 
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   font-size: 16px;
+
+  background-color: var(--body-color);
+}
+
+body[data-year="2021"] {
+  --body-color: #94949c;
+  --header-color: #f7de5a;
+  --sidebar-color: #838470;
+  --nav-color: #cec68c;
 }
 
 .page-container {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   padding: 0.7em;
-  background-color: #94949c;
 }
 
 .header {
   padding: var(--default-padding);
-  background-color: #f7de5a;
+  padding-left: calc(var(--default-padding) * 2);
+  background-color: var(--header-color);
   border: var(--default-border);
 }
 
@@ -56,7 +64,7 @@ body {
   flex: 1;
   min-width: 8em;
   padding: var(--default-padding);
-  background-color: #838470;
+  background-color: var(--sidebar-color);
   border-right: var(--default-border);
 }
 
@@ -103,7 +111,7 @@ body {
   align-items: center;
   column-gap: 0.2em;
 
-  background-color: #cec68c;
+  background-color: var(--nav-color);
   color: #333;
   border-color: #ccc;
   border: 1px solid transparent;
