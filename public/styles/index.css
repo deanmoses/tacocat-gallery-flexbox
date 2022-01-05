@@ -52,19 +52,20 @@
 .page-contents {
   flex: 1;
 
-  display: grid; /* display my children in a grid */
-  grid-template-columns: auto auto; /* two columns: sidebar & main content*/
-  background-color: black; /* border color between sidebar & main content */
-  gap: 1px; /* border width between sidebar & main content */
+  display: flex;
 }
 
 .sidebar {
+  flex: 1;
   min-width: 8em;
   padding: calc(var(--default-padding) * 4) calc(var(--default-padding) * 2);
   background-color: var(--sidebar-color);
+  border-right: var(--default-border);
 }
 
 .main-content {
+  flex: 3;
+
   display: flex;
   flex-direction: column;
   gap: calc(var(--default-padding) * 2);
